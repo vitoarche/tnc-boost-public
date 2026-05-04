@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TNC BOOST — Privacy Policy</title>
+<style>
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;max-width:780px;margin:40px auto;padding:24px;line-height:1.65;color:#1a1a1a;background:#fafafa}
+  h1{font-size:28px;border-bottom:2px solid #5b8def;padding-bottom:10px}
+  h2{font-size:18px;margin-top:32px;color:#3d6cd8}
+  code{background:#eef2ff;padding:2px 6px;border-radius:4px;font-size:0.9em}
+  ul{padding-left:22px}
+  .updated{color:#666;font-size:14px;font-style:italic}
+  .box{background:#fff;border:1px solid #e5e7eb;padding:16px 20px;border-radius:8px;margin:18px 0}
+  a{color:#3d6cd8}
+</style>
+</head>
+<body>
+
+<h1>TNC BOOST — Privacy Policy</h1>
+<p class="updated">Last updated: May 4, 2026</p>
+
+<p>This privacy policy describes how the <strong>TNC BOOST</strong> Chrome extension (the "Extension") handles user data. TNC BOOST is a productivity tool designed for sellers using the Eldorado.gg marketplace.</p>
+
+<h2>1. Who We Are</h2>
+<p>TNC BOOST is developed and maintained by <strong>arche</strong>. Contact:
+<a href="mailto:arche@montade.com">arche@montade.com</a></p>
+
+<h2>2. What Data We Collect</h2>
+
+<div class="box">
+<p>The Extension does <strong>not</strong> collect, transmit, or sell any of the following:</p>
+<ul>
+  <li>Personal browsing history</li>
+  <li>Eldorado.gg account credentials</li>
+  <li>Eldorado.gg messages, customer information, or transaction details</li>
+  <li>Any data unrelated to license validation</li>
+</ul>
+</div>
+
+<p>The Extension stores the following <strong>locally on your device only</strong> using <code>chrome.storage.local</code>:</p>
+<ul>
+  <li>Your configuration (price matrix, currency, message templates, ranges)</li>
+  <li>Counters of offers prepared during a session (sent / skipped / failed)</li>
+  <li>A randomly generated <strong>device identifier</strong> (UUID) used solely to bind a license to one computer</li>
+  <li>Your activated license key, expiration date, and last-check timestamp</li>
+</ul>
+
+<p>This data never leaves your device, except for the license validation described below.</p>
+
+<h2>3. License Validation</h2>
+<p>To verify that your license is valid, the Extension communicates with our license server hosted on Google Firebase Firestore. The Extension sends the following minimum data over HTTPS:</p>
+<ul>
+  <li>Your license key (so we can look it up)</li>
+  <li>The generated device identifier (only on first activation, to prevent license sharing)</li>
+</ul>
+<p>We do <strong>not</strong> link this data to your name, IP address, browsing activity, or Eldorado account. The license server is queried at most once every 6 hours.</p>
+
+<h2>4. Data We Receive and Store on Our Server</h2>
+<p>For each license, our license database stores:</p>
+<ul>
+  <li>License key</li>
+  <li>The customer name and email <strong>only if you provided them at the time of purchase</strong></li>
+  <li>Plan duration and expiration date</li>
+  <li>The device identifier of the activated computer</li>
+</ul>
+<p>This information is used solely for license enforcement and customer support. It is not shared with third parties.</p>
+
+<h2>5. Permissions Justification</h2>
+<ul>
+  <li><code>storage</code> — to save your configuration and license locally.</li>
+  <li><code>notifications</code> — to alert you of new orders on Eldorado.gg, only when you enable this option.</li>
+  <li><code>alarms</code> — to schedule periodic license re-checks.</li>
+  <li><code>host_permissions: eldorado.gg</code> — to read open orders and prefill the offer modal on the page you are viewing.</li>
+  <li><code>host_permissions: firestore.googleapis.com</code> — to validate your license against our server.</li>
+</ul>
+
+<h2>6. Data Retention &amp; Deletion</h2>
+<p>You can delete all locally stored data at any time by removing the Extension from Chrome. To request deletion of license records associated with your purchase, contact
+<a href="mailto:arche@montade.com">arche@montade.com</a>; we will remove the record within 14 days.</p>
+
+<h2>7. Children</h2>
+<p>The Extension is not intended for children under 13. We do not knowingly collect data from minors.</p>
+
+<h2>8. Third-Party Services</h2>
+<ul>
+  <li><strong>Google Firebase / Firestore</strong> — hosts the license database. See <a href="https://firebase.google.com/support/privacy">Firebase Privacy</a>.</li>
+</ul>
+<p>The Extension does not use analytics, ad networks, fingerprinting, or any other third-party tracking.</p>
+
+<h2>9. Changes to This Policy</h2>
+<p>We may update this policy. The "Last updated" date above will reflect the most recent revision. Continued use of the Extension after changes constitutes acceptance.</p>
+
+<h2>10. Contact</h2>
+<p>For privacy questions, license issues, or data deletion requests:
+<a href="mailto:arche@montade.com">arche@montade.com</a></p>
+
+</body>
+</html>
